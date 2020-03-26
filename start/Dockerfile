@@ -25,6 +25,8 @@ FROM open-liberty
 
 ARG VERSION=1.0
 ARG REVISION=SNAPSHOT
+# temporarily adding to get a more detailed log
+ARG VERBOSE=true
 
 LABEL \
   org.opencontainers.image.authors="Dewan Ahmed" \
