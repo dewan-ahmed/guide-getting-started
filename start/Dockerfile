@@ -15,7 +15,7 @@ COPY ./src ./src
 # build for release
 # RUN mvn -ntp liberty:install-server liberty:create package
 # build the war file
-mvn package
+RUN mvn package
 
 
 
