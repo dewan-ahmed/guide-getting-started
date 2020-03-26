@@ -21,7 +21,7 @@ mvn package
 
 # Second stage
 
-FROM open-liberty as runner
+FROM open-liberty
 
 ARG VERSION=1.0
 ARG REVISION=SNAPSHOT
