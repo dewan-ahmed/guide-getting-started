@@ -46,5 +46,7 @@ ENV WAR_NAME=guide-getting-started.war
 
 COPY --from=builder --chown=1001:0 src/main/liberty/config/ /config/
 COPY --from=builder --chown=1001:0 target/$WAR_NAME /config/apps/
+COPY --from=builder --chown=1001:0 target/liberty/wlp/usr/servers/defaultServer/logs/messages.log /msg/logs/
 
 RUN configure.sh
+RUN cat msg/logs/messages.log
